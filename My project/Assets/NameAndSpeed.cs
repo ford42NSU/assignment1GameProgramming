@@ -10,6 +10,7 @@ public class NameAndSpeed : MonoBehaviour
     public Text SpeedDisplay;
     public Slider SpeedInput;
     public InputField Name;
+    public static string Names;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class NameAndSpeed : MonoBehaviour
     void Update()
     {
         NameDisplay.text = Name.text;
+        Names = Name.text;
         Speedbonus = SpeedInput.value;
         SpeedDisplay.text = Speedbonus.ToString("F2");
     }
